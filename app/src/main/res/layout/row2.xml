@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="10dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:id="@+id/rel">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uName"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:text="User"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rqstType"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:layout_below="@id/uName"
+            android:layout_marginLeft="5dp"
+            android:text="Request Type"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rqstValue"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:layout_below="@id/uName"
+            android:layout_toRightOf="@id/rqstType"
+            android:layout_marginLeft="15dp"
+            android:text="Request Value"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:id="@+id/tvstatus"
+            android:layout_below="@id/rqstType"
+            android:layout_marginLeft="5dp"
+            android:text="Current status"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:layout_below="@id/rqstValue"
+            android:layout_toRightOf="@id/tvstatus"
+            android:layout_marginLeft="15dp"
+            android:text="status"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btAccept"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:text="Accept"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgDone"
+            android:background="@drawable/ic_done"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookMeeting"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimaryDark">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#ffffff"
+        android:text="Book Meeting Rooms"
+        android:textSize="28dp"
+        android:layout_gravity="left"
+        android:paddingLeft="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        app:boxStrokeColor="#ffffff"
+        android:textColorHint="#fff">
+
+        <EditText
+            android:id="@+id/meeting"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Enter No. of Meeting Rooms"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <Button
+        android:id="@+id/addmeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorAccent"
+        android:text="BOOK ROOMS"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/login"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorAccent"/>
+
+</LinearLayout>

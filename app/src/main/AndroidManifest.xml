@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.abhigyan.coworkspace">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BookMeeting"></activity>
+        <activity android:name=".BookSeats" />
+        <activity android:name=".BookCabin" />
+        <activity android:name=".AddMeeting" />
+        <activity android:name=".AddCabins" />
+        <activity android:name=".AddSeats" />
+        <activity android:name=".AddUser" />
+        <activity android:name=".UserDashboard" />
+        <activity android:name=".AdminDashboard" />
+        <activity android:name=".Register" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

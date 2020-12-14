@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "223120072471",
+    "firebase_url": "https://coworkspace-48085-default-rtdb.firebaseio.com",
+    "project_id": "coworkspace-48085",
+    "storage_bucket": "coworkspace-48085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223120072471:android:645c35f3909207a27ca152",
+        "android_client_info": {
+          "package_name": "com.abhigyan.coworkspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223120072471-sirmi8lj11rk4sa9ld35e0fcj3qo1usl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abhigyan.coworkspace",
+            "certificate_hash": "e8210081f4a1b94acbf749c6c083dddbeabc8c00"
+          }
+        },
+        {
+          "client_id": "223120072471-qeom9ccm0bt4frqfo0g3aqkqhb8j9i42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrIClMEaOOY4LuFYeHcYvxmHaf6fFY9QE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223120072471-qeom9ccm0bt4frqfo0g3aqkqhb8j9i42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
