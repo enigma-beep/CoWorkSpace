@@ -72,7 +72,7 @@ public class BookCabin extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(BookCabin.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(BookCabin.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -96,7 +96,7 @@ public class BookCabin extends AppCompatActivity {
                     etCabin.setError("can't be blank");
                 }
                 else if(Integer.parseInt(cabin)>n){
-                    Toast.makeText(BookCabin.this, "Can't Process, cabin request is more than available cabins", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookCabin.this, "Can't Process, cabin request is more than available cabins", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     final ProgressDialog pd = new ProgressDialog(BookCabin.this);
@@ -122,7 +122,7 @@ public class BookCabin extends AppCompatActivity {
                                 reference.child("requests").child(ts).child("value").setValue(cabin);
                                 reference.child("requests").child(ts).child("status").setValue("false");
 
-                                Toast.makeText(BookCabin.this, "Cabin Booking request sent", Toast.LENGTH_LONG).show();
+                                Toast.makeText(BookCabin.this, "Cabin Booking request sent", Toast.LENGTH_SHORT).show();
 
 //                                NotificationCompat.Builder builder = new NotificationCompat.Builder(BookCabin.this).setSmallIcon(R.drawable.ic_message).setContentTitle("New Notification")
 //                                        .setContentText("New Cabin Booking Request").setAutoCancel(true);
@@ -186,7 +186,7 @@ public class BookCabin extends AppCompatActivity {
                                         reference.child("requests").child(ts).child("value").setValue(cabin);
                                         reference.child("requests").child(ts).child("status").setValue("false");
 
-                                        Toast.makeText(BookCabin.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookCabin.this, "Booking request sent", Toast.LENGTH_SHORT).show();
 
                                         NotificationCompat.Builder mBuilder =
                                                 new NotificationCompat.Builder(BookCabin.this, "notify_001");
@@ -236,7 +236,7 @@ public class BookCabin extends AppCompatActivity {
                                         reference.child("requests").child(ts).child("value").setValue(cabin);
                                         reference.child("requests").child(ts).child("status").setValue("false");
 
-                                        Toast.makeText(BookCabin.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookCabin.this, "Booking request sent", Toast.LENGTH_SHORT).show();
 
                                         NotificationCompat.Builder mBuilder =
                                                 new NotificationCompat.Builder(BookCabin.this, "notify_001");

@@ -102,14 +102,14 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String s) {
                             if(s.equals("null")){
-                                Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 try {
                                     JSONObject obj = new JSONObject(s);
 
                                     if(!obj.has(user)){
-                                        Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_SHORT).show();
                                     }
 
                                     else if(obj.getJSONObject(user).getString("password").equals(pass)){
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     }
                                     else {
-                                        Toast.makeText(MainActivity.this, "incorrect password", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "incorrect password", Toast.LENGTH_SHORT).show();
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();

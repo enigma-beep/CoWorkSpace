@@ -75,7 +75,7 @@ public class BookSeats extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(FirebaseError firebaseError) {
-                    Toast.makeText(BookSeats.this, "Error", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookSeats.this, "Error", Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -86,12 +86,12 @@ public class BookSeats extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     String newMeeting=dataSnapshot.child("SeatInfo").child("Fixed").child("Total").getValue().toString();
                     m = Integer.parseInt(newMeeting);
-                    Toast.makeText(BookSeats.this, "Inside value listener..Fixed="+m, Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookSeats.this, "Inside value listener..Fixed="+m, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onCancelled(FirebaseError firebaseError) {
-                    Toast.makeText(BookSeats.this, "Error", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookSeats.this, "Error", Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -120,7 +120,7 @@ public class BookSeats extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        //Toast.makeText(getApplicationContext(),""+ menuItem.getTitle(),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),""+ menuItem.getTitle(),Toast.LENGTH_SHORT).show();
                         etType.setText(menuItem.getTitle());
                         return true;
                     }
@@ -142,7 +142,7 @@ public class BookSeats extends AppCompatActivity {
                     etType.setError("can't be blank");
                 }
                 else if((seattype.equals("Flexi")&&Integer.parseInt(seat)>n)||seattype.equals("Fixed")&&Integer.parseInt(seat)>m){
-                    Toast.makeText(BookSeats.this, "Can't Process, request is more than available Seats Rooms", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookSeats.this, "Can't Process, request is more than available Seats Rooms", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     final ProgressDialog pd = new ProgressDialog(BookSeats.this);
@@ -202,7 +202,7 @@ public class BookSeats extends AppCompatActivity {
 
                                 mNotificationManager.notify(0, mBuilder.build());
 
-                                Toast.makeText(BookSeats.this, "Meeting Booking request sent", Toast.LENGTH_LONG).show();
+                                Toast.makeText(BookSeats.this, "Meeting Booking request sent", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -255,7 +255,7 @@ public class BookSeats extends AppCompatActivity {
 
                                         mNotificationManager.notify(0, mBuilder.build());
 
-                                        Toast.makeText(BookSeats.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookSeats.this, "Booking request sent", Toast.LENGTH_SHORT).show();
                                     } else {
 
                                         Long tsLong = System.currentTimeMillis()/1000;
@@ -304,7 +304,7 @@ public class BookSeats extends AppCompatActivity {
 
                                         mNotificationManager.notify(0, mBuilder.build());
 
-                                        Toast.makeText(BookSeats.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookSeats.this, "Booking request sent", Toast.LENGTH_SHORT).show();
 
                                     }
 

@@ -113,7 +113,7 @@ public class AddUser extends AppCompatActivity {
 
                             if(s.equals("null")) {
                                 reference.child(user).child("password").setValue(pass);
-                                Toast.makeText(AddUser.this, "registration successful", Toast.LENGTH_LONG).show();
+                                Toast.makeText(AddUser.this, "registration successful", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -128,9 +128,9 @@ public class AddUser extends AppCompatActivity {
                                         reference.child(user).child("Phone").setValue(phno);
                                         reference.child(user).child("NumEmp").setValue(numemp);
 
-                                        Toast.makeText(AddUser.this, "registration successful", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddUser.this, "registration successful", Toast.LENGTH_SHORT).show();
                                     } else {
-                                        Toast.makeText(AddUser.this, "username already exists", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddUser.this, "username already exists", Toast.LENGTH_SHORT).show();
                                     }
 
                                 } catch (JSONException e) {

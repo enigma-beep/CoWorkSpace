@@ -61,7 +61,7 @@ public class AddSeats extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(AddSeats.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddSeats.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -78,7 +78,7 @@ public class AddSeats extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(AddSeats.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddSeats.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -139,7 +139,7 @@ public class AddSeats extends AppCompatActivity {
 
                             if(s.equals("null")) {
                                 reference.child("SeatInfo").child("Fixed").child("Total").setValue(seat);
-                                Toast.makeText(AddSeats.this, "Fixed Seats Added", Toast.LENGTH_LONG).show();
+                                Toast.makeText(AddSeats.this, "Fixed Seats Added", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -147,13 +147,13 @@ public class AddSeats extends AppCompatActivity {
 
                                     if (!obj.has("SeatInfo")) {
                                         reference.child("SeatInfo").child("Fixed").child("Total").setValue(seat);
-                                        Toast.makeText(AddSeats.this, "Fixed Seats Added", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddSeats.this, "Fixed Seats Added", Toast.LENGTH_SHORT).show();
                                     } else {
 
 
 
                                         reference.child("SeatInfo").child("Fixed").child("Total").setValue(String.valueOf(m + Integer.parseInt(seat)));
-                                        Toast.makeText(AddSeats.this, "Fixed Seats Updated", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddSeats.this, "Fixed Seats Updated", Toast.LENGTH_SHORT).show();
                                     }
 
                                 } catch (JSONException e) {
@@ -189,7 +189,7 @@ public class AddSeats extends AppCompatActivity {
 
                             if(s.equals("null")) {
                                 reference.child("SeatInfo").child("Flexi").child("Total").setValue(seat);
-                                Toast.makeText(AddSeats.this, "Flexi Seats Added", Toast.LENGTH_LONG).show();
+                                Toast.makeText(AddSeats.this, "Flexi Seats Added", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -199,13 +199,13 @@ public class AddSeats extends AppCompatActivity {
                                         reference.child("SeatInfo").child("Flexi").child("Total").setValue(seat);
 //                                        reference.child(user).child("Name").setValue(nam);
 //                                        reference.child(user).child("Company").setValue(comp);
-                                        Toast.makeText(AddSeats.this, "Flexi Seats Added", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddSeats.this, "Flexi Seats Added", Toast.LENGTH_SHORT).show();
                                     } else {
 
 
 
                                         reference.child("SeatInfo").child("Flexi").child("Total").setValue(String.valueOf(n + Integer.parseInt(seat)));
-                                        Toast.makeText(AddSeats.this, "Flexi Seats Updated", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddSeats.this, "Flexi Seats Updated", Toast.LENGTH_SHORT).show();
                                     }
 
                                 } catch (JSONException e) {

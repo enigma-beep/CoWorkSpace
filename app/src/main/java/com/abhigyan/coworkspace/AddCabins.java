@@ -57,7 +57,7 @@ public class AddCabins extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(AddCabins.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddCabins.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -91,7 +91,7 @@ public class AddCabins extends AppCompatActivity {
 
                             if(s.equals("null")) {
                                 reference.child("CabinInfo").child("Total").setValue(cabin);
-                                Toast.makeText(AddCabins.this, "Cabins Added", Toast.LENGTH_LONG).show();
+                                Toast.makeText(AddCabins.this, "Cabins Added", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -101,13 +101,13 @@ public class AddCabins extends AppCompatActivity {
                                         reference.child("CabinInfo").child("Total").setValue(cabin);
 //                                        reference.child(user).child("Name").setValue(nam);
 //                                        reference.child(user).child("Company").setValue(comp);
-                                        Toast.makeText(AddCabins.this, "Cabin obj Added", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddCabins.this, "Cabin obj Added", Toast.LENGTH_SHORT).show();
                                     } else {
 
 
 
                                         reference.child("CabinInfo").child("Total").setValue(String.valueOf(n + Integer.parseInt(cabin)));
-                                        Toast.makeText(AddCabins.this, "Cabins Updated", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddCabins.this, "Cabins Updated", Toast.LENGTH_SHORT).show();
                                     }
 
                                 } catch (JSONException e) {

@@ -59,7 +59,7 @@ public class AddMeeting extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(AddMeeting.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddMeeting.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -95,7 +95,7 @@ public class AddMeeting extends AppCompatActivity {
 
                             if(s.equals("null")) {
                                 reference.child("MeetingInfo").child("Total").setValue(meeting);
-                                Toast.makeText(AddMeeting.this, "Meeting Rooms Added", Toast.LENGTH_LONG).show();
+                                Toast.makeText(AddMeeting.this, "Meeting Rooms Added", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -105,12 +105,12 @@ public class AddMeeting extends AppCompatActivity {
                                         reference.child("MeetingInfo").child("Total").setValue(meeting);
 //                                        reference.child(user).child("Name").setValue(nam);
 //                                        reference.child(user).child("Company").setValue(comp);
-                                        Toast.makeText(AddMeeting.this, "Meeting Rooms Added", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddMeeting.this, "Meeting Rooms Added", Toast.LENGTH_SHORT).show();
                                     } else {
 
 
                                         reference.child("MeetingInfo").child("Total").setValue(String.valueOf(n + Integer.parseInt(meeting)));
-                                        Toast.makeText(AddMeeting.this, "Meeting Rooms Updated", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(AddMeeting.this, "Meeting Rooms Updated", Toast.LENGTH_SHORT).show();
                                     }
 
                                 } catch (JSONException e) {

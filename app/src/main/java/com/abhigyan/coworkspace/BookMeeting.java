@@ -71,7 +71,7 @@ public class BookMeeting extends AppCompatActivity {
 
             @Override
             public void onCancelled(FirebaseError firebaseError) {
-                Toast.makeText(BookMeeting.this, "Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(BookMeeting.this, "Error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -95,7 +95,7 @@ public class BookMeeting extends AppCompatActivity {
                     etMeeting.setError("can't be blank");
                 }
                 else if(Integer.parseInt(meeting)>n){
-                    Toast.makeText(BookMeeting.this, "Can't Process, request is more than available Meeting Rooms", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookMeeting.this, "Can't Process, request is more than available Meeting Rooms", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     final ProgressDialog pd = new ProgressDialog(BookMeeting.this);
@@ -158,7 +158,7 @@ public class BookMeeting extends AppCompatActivity {
 
 
 
-                                Toast.makeText(BookMeeting.this, "Meeting Booking request sent", Toast.LENGTH_LONG).show();
+                                Toast.makeText(BookMeeting.this, "Meeting Booking request sent", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 try {
@@ -211,7 +211,7 @@ public class BookMeeting extends AppCompatActivity {
 
                                         mNotificationManager.notify(0, mBuilder.build());
 
-                                        Toast.makeText(BookMeeting.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookMeeting.this, "Booking request sent", Toast.LENGTH_SHORT).show();
                                     } else {
 
                                         Long tsLong = System.currentTimeMillis()/1000;
@@ -260,7 +260,7 @@ public class BookMeeting extends AppCompatActivity {
 
                                         mNotificationManager.notify(0, mBuilder.build());
 
-                                        Toast.makeText(BookMeeting.this, "Booking request sent", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(BookMeeting.this, "Booking request sent", Toast.LENGTH_SHORT).show();
 
                                     }
 
