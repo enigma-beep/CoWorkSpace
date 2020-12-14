@@ -39,6 +39,8 @@ public class UserDashboard extends AppCompatActivity {
 
     public String user;
 
+    TextView uName, tName, tPhone, tDesig, tComp, tAddr, tCabin, tMeeting, tFlexi, tFixed;
+
     public String mUser, mType, mValue, mStatus;
     int children;
 
@@ -59,7 +61,20 @@ public class UserDashboard extends AppCompatActivity {
         fabseat = findViewById(R.id.fabseat);
         fabcabin = findViewById(R.id.fabcabin);
 
+        uName = findViewById(R.id.uName);
+        tName = findViewById(R.id.tName);
+        tPhone = findViewById(R.id.tPhone);
+        tComp = findViewById(R.id.tComp);
+        tDesig = findViewById(R.id.tDesig);
+        tAddr = findViewById(R.id.tAddr);
+        tCabin = findViewById(R.id.tCabin);
+        tMeeting = findViewById(R.id.tMeeting);
+        tFlexi = findViewById(R.id.tFlexi);
+        tFixed = findViewById(R.id.tFixed);
+
         user=getIntent().getStringExtra("user");
+
+        uName.setText("Hey "+user+"!");
 
         Toast.makeText(getApplicationContext(), "User :"+user, Toast.LENGTH_SHORT).show();
 
@@ -112,6 +127,62 @@ public class UserDashboard extends AppCompatActivity {
 
             }
         });
+
+
+        final Firebase userref = new Firebase("https://coworkspace-48085-default-rtdb.firebaseio.com/users");
+        userref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                String mName=dataSnapshot.child(user).child("Name").getValue().toString();
+                tName.setText(mName);
+                String mPhone=dataSnapshot.child(user).child("Phone").getValue().toString();
+                tPhone.setText(mPhone);
+                String mComp=dataSnapshot.child(user).child("Company").getValue().toString();
+                tComp.setText(mComp);
+                String mDesig=dataSnapshot.child(user).child("Designation").getValue().toString();
+                tDesig.setText(mDesig);
+                String mAddr=dataSnapshot.child(user).child("Address").getValue().toString();
+                tAddr.setText(mAddr);
+
+
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        final Firebase reference2 = new Firebase("https://coworkspace-48085-default-rtdb.firebaseio.com/info");
+        reference2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                String cabin=dataSnapshot.child("CabinInfo").child("Total").getValue().toString();
+                tCabin.setText(cabin);
+
+                String meeting=dataSnapshot.child("MeetingInfo").child("Total").getValue().toString();
+                tMeeting.setText(meeting);
+
+                String flexi=dataSnapshot.child("SeatInfo").child("Flexi").child("Total").getValue().toString();
+                tFlexi.setText(flexi);
+
+                String fixed=dataSnapshot.child("SeatInfo").child("Fixed").child("Total").getValue().toString();
+                tFixed.setText(fixed);
+
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
 
 
         fabmeeting.setOnClickListener(new View.OnClickListener() {
